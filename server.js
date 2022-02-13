@@ -10,10 +10,8 @@ app.use(express.json());
 
 app.use("/public/assets", express.static("./public/assets"));
 
-
 require("./routes/notes")(app);
 require("./routes/api")(app);
 
-
 // Start the server on the port
-  app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));

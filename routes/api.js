@@ -15,7 +15,6 @@ module.exports = function(app) {
         res.json(data[Number(req.params.id)]);
     });
 
-
     app.post("/api/notes", function(req, res) {
         console.log(req.body);
 
@@ -47,7 +46,7 @@ module.exports = function(app) {
 
                 let newData = JSON.stringify(data);
 
-                fs.writeFileSync("./db/noteContents.json", newData)
+                fs.writeFileSync("./db/db.json", newData)
             }
         }
         res.json(data);
